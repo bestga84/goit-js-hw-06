@@ -17,14 +17,17 @@ const images = [
 
 // const styleEl = document.querySelector("body");
 
-const styleCssEl = document.createElement('style');
-// styleCssEl.classList.add('item-flex');
+const styleEl = document.createElement('style');
+styleEl.classList.add('item-flex');
 
-styleCssEl.textContent = ".item-flex {list-style: width: 260px; none; display: flexbox;}";
+styleEl.textContent = ".item-flex {list-style: none; display: flex; flex-wrap: wrap; justify-content: center;}";
 
-// styleCssEl.insertAdjacentHTML("beforeend", styleCssEl);
+document.head.appendChild(styleEl);
 
-console.log(styleCssEl);
+
+styleEl.insertAdjacentHTML("beforeend", styleEl);
+
+console.log(styleEl);
 
 
 
@@ -35,7 +38,7 @@ imageEl.classList.add('item-flex');
 
 const imagesMarkup = images.map(image => {return `<li><img alt="${image.alt}" src="${image.url}" width="300px"></li>`;}).join("");
 
-imageEl.insertAdjacentHTML("afterend", imagesMarkup, styleCssEl);
+imageEl.insertAdjacentHTML("afterend", imagesMarkup);
 
 console.log(imageEl);
 
