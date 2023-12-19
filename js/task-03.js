@@ -15,11 +15,39 @@ const images = [
 
 
 
+// const styleEl = document.querySelector("body");
 
-const A = document.querySelector(".gallery");
+const styleCssEl = document.createElement('style');
+// styleCssEl.classList.add('item-flex');
 
-const B = images.map(image => {return `<li><img alt="${image.alt}" src="${image.url}" width="300px"></li>`;}).join("");
+styleCssEl.textContent = ".item-flex {list-style: width: 260px; none; display: flexbox;}";
 
-A.insertAdjacentHTML("beforeend", B);
+// styleCssEl.insertAdjacentHTML("beforeend", styleCssEl);
 
-console.log(A);
+console.log(styleCssEl);
+
+
+
+
+const imageEl = document.querySelector(".gallery");
+
+imageEl.classList.add('item-flex');
+
+const imagesMarkup = images.map(image => {return `<li><img alt="${image.alt}" src="${image.url}" width="300px"></li>`;}).join("");
+
+imageEl.insertAdjacentHTML("afterend", imagesMarkup, styleCssEl);
+
+console.log(imageEl);
+
+
+
+
+
+// чернетка, на буквах А, В, С легше скласти логіку, і потімт записати в нормальних іменах
+// const A = document.querySelector(".gallery");
+
+// const B = images.map(image => {return `<li><img alt="${image.alt}" src="${image.url}" width="300px"></li>`;}).join("");
+
+// A.insertAdjacentHTML("beforeend", B);
+
+// console.log(A);
