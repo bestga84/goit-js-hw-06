@@ -15,19 +15,19 @@ const images = [
 
 
 
-// const styleEl = document.querySelector("body");
+// // const styleEl = document.querySelector("body");
 
 const styleEl = document.createElement('style');
-styleEl.classList.add('item-flex');
+// styleEl.classList.add('item-flex');
 
-styleEl.textContent = ".item-flex {list-style: none; display: flex; flex-wrap: wrap; justify-content: center;}";
+styleEl.textContent = ".item-flex {list-style: none; display: flex; flex-wrap: wrap; justify-content: flex-start; gap: 10px;}";
 
 document.head.appendChild(styleEl);
 
 
-styleEl.insertAdjacentHTML("beforeend", styleEl);
+// styleEl.insertAdjacentHTML("beforeend", styleEl);
 
-console.log(styleEl);
+// console.log(styleEl);
 
 
 
@@ -38,7 +38,7 @@ imageEl.classList.add('item-flex');
 
 const imagesMarkup = images.map(image => {return `<li><img alt="${image.alt}" src="${image.url}" width="300px"></li>`;}).join("");
 
-imageEl.insertAdjacentHTML("afterend", imagesMarkup);
+imageEl.insertAdjacentHTML("beforeend", imagesMarkup);
 
 console.log(imageEl);
 
