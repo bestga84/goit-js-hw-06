@@ -9,7 +9,7 @@ const mainColor = document.querySelector("body");
 const colors = {
   btnChangeColor: document.querySelector(".change-color"),
   color: document.querySelector(".color"),
-  backColor: rgb(255, 255, 255),
+  backColor: "rgb(255, 255, 255)",
 }
 
 mainColor.style.backgroundColor = colors.backColor;
