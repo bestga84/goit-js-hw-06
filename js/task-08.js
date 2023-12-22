@@ -3,15 +3,15 @@ const loginForm = document.querySelector(".login-form");
 const inputEvent = (event) => {
     event.preventDefault();
 
-    const elements = {
-        mail,
-        password,
-    }
+    const {
+        elements: { email, password }
+    } = event.currentTarget;
 
-    if (elements.mail.value === "" || elements.password.value === "") {
+    if (email.value === "" || password.value === "") {
         return alert("Please, try again.")
     }
-    return event.currentTarget.reset();
+    const userData = {email: email.value, password: password.value}
+    event.currentTarget.reset();
 }
 
 
