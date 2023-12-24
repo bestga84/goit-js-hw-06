@@ -1,17 +1,18 @@
 const validInputEl = document.querySelector("#validation-input");
 
-const InputElLength = validInputEl.dataset.length;
-
 validInputEl.addEventListener("blur", (event) => {
-    if (event.currentTarget.value.length == InputElLength) {
+    const inputElLength = validInputEl.dataset.length;
+    const currentElLength = event.currentTarget.value.length;
+
+    if (currentElLength == inputElLength) {
         validInputEl.classList.add("valid");
-        validInputEl.classList.remove("invalid");
+        console.log("Ви ввели правильну кількість символів:", currentElLength);
     } else {
         validInputEl.classList.add("invalid");
-        validInputEl.classList.add("valid");
+        console.log("Ви ввели неправильну кількість символів:", currentElLength);
     }
 });
 
-// console.log(validInputEl);
-// console.log(InputElLength);
-// console.log(expectedLength);
+console.log(validInputEl);
+console.log(inputElLength);
+console.log(currentElLength);
