@@ -9,11 +9,12 @@ const inputEvent = (event) => {
 
     if (email.value === "" || password.value === "") {
         return alert("Please, try again.")
-    }
-    const userData = {email: email.value, password: password.value}
+    };
+    const userData = {email: email.value, password: password.value};
+    console.log(userData.email);
+    console.log(userData.password);
+    console.log(userData);
     event.currentTarget.reset();
-}
+};
 
-
-
-loginForm.addEventListener("submit", inputEvent)
+loginForm.addEventListener("submit", inputEvent);
