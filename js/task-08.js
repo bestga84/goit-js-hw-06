@@ -11,8 +11,8 @@ const inputEvent = (event) => {
         return alert("Please, try again.")
     };
     const userData = {email: email.value, password: password.value};
-    console.log(userData.email);
-    console.log(userData.password);
+    // console.log(userData.email);
+    // console.log(userData.password);
     console.log(userData);
     event.currentTarget.reset();
 };
