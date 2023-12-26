@@ -6,9 +6,11 @@ validInputEl.addEventListener("blur", (event) => {
 
     if (currentElLength == inputElLength) {
         validInputEl.classList.add("valid");
+        validInputEl.classList.remove("invalid");
         console.log("Ви ввели правильну кількість символів:", currentElLength);
     } else {
         validInputEl.classList.add("invalid");
+        validInputEl.classList.remove("valid");
         console.log("Ви ввели неправильну кількість символів:", currentElLength);
     }
 });
